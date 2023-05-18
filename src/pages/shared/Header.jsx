@@ -4,7 +4,6 @@ import { FaEllipsisV, FaPhoneSquareAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "react-tooltip/dist/react-tooltip.css";
 import { AuthContext } from "../../providers/AuthProviders";
 import { Tooltip } from "react-tooltip";
-// import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,39 +76,34 @@ const Header = () => {
             </li>
           </ul>
           {/* button section  */}
-
-          {user ? (
-            <div className="hidden lg:flex items-center gap-4 ">
-              <img
-                className="h-14 w-14 rounded-full"
-                src={`${user?.photoURL}`}
-                alt=""
-                data-tooltip-id="my-tooltip"
-                data-tooltip-content={user.displayName}
-              />
-              <Tooltip id="my-tooltip" />
-              <button onClick={logOut} className="btn">
-                Logout
-              </button>
-            </div>
-          ) : (
-            <Link to="/login" className="hidden lg:flex">
-              <button className="btn">Login</button>
-            </Link>
-          )}
         </div>
+        {user ? (
+          <div className="hidden lg:flex items-center gap-4 ">
+            <img
+              className="h-14 w-14 rounded-full"
+              src={`${user?.photoURL}`}
+              alt=""
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content={user.displayName}
+            />
+            <Tooltip id="my-tooltip" />
+            <button onClick={logOut} className="btn">
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to="/login" className="hidden lg:flex">
+            <button className="btn">Login</button>
+          </Link>
+        )}
         {/* mobile navbar section  */}
         <div className="lg:hidden">
-          {/* dropdown open button  */}
-          <button
-            aria-label="Open Menu"
-            title="Open Menu"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          {/* dropdown button  */}
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <FaEllipsisV className=" text-gray-600" />
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-1/2 z-10">
+            <div className="absolute top-12 right-0 w-1/2 z-10">
               <div className="p-5  border rounded shadow-sm bg-white">
                 {/* logo & button section  */}
                 <div className="flex items-center justify-between mb-4">
@@ -132,7 +126,6 @@ const Header = () => {
                       </Link>
                     )}
                   </div>
-                  {/* dropdown menu close button  */}
                 </div>
                 {/* mobile nav items section  */}
                 <nav className="ml-2">

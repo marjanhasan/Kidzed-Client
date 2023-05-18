@@ -51,7 +51,7 @@ const Gallary = () => {
           We strive to have a positive impact on our customers and our community
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {chefs.map((chef) => (
           <GallaryCards key={chef.id} photo={chef.photo} />
         ))}

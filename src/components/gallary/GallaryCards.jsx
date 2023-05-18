@@ -1,7 +1,7 @@
 const GallaryCards = ({ photo }) => {
   return (
     <div
-      className={`relative mr-3 h-[300px] w-[200px] inline-block overflow-hidden rounded-2xl border-4 border-purple-600 cursor-pointer justify-self-center`}
+      className={`relative mr-3 h-[300px] w-[200px] inline-block overflow-hidden rounded-2xl border shadow-md shadow-current cursor-pointer justify-self-center`}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
       <img src={photo} className="h-full w-full object-cover" />
