@@ -125,7 +125,9 @@ const Header = () => {
                     ) : (
                       <Link to="/" className="inline-flex items-center">
                         <span className="ml-2 text-2xl font-bold ">
-                          only<span className="text-lime-400">Chefs</span>
+                          <span className="text-fuchsia-700 underline decoration-wavy">
+                            Kidzed
+                          </span>
                         </span>
                       </Link>
                     )}
