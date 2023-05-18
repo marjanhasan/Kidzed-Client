@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="my-container">
-      <div className="flex justify-between items-center h-8 font-semibold bg-gray-100 px-4">
+      <div className="md:flex justify-between items-center h-fit font-semibold bg-gray-100 p-2">
         <div className="flex gap-1 items-center ">
           <FaPhoneSquareAlt className="text-indigo-500" />
           <span>Call Us:</span>
@@ -22,7 +22,7 @@ const Header = () => {
       <div className="flex items-center justify-between relative px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         {/* logo section  */}
         <Link to="/" className="">
-          <span className="ml-2 text-2xl font-bold tracking-wide">
+          <span className="ml-2 text-2xl font-bold ">
             <span className="text-fuchsia-700 underline decoration-wavy">
               Kidzed
             </span>
@@ -124,7 +124,7 @@ const Header = () => {
                         </Link>
                       ) : (
                         <Link to="/" className="inline-flex items-center">
-                          <span className="ml-2 text-2xl font-bold tracking-wide">
+                          <span className="ml-2 text-2xl font-bold ">
                             only<span className="text-lime-400">Chefs</span>
                           </span>
                         </Link>

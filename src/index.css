@@ -5,8 +5,8 @@
   @apply px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-20 lg:px-8;
 }
 .active {
-  @apply font-semibold tracking-wide transition-colors duration-200 bg-fuchsia-700 inline-block px-3 py-1 rounded-2xl text-white;
+  @apply font-semibold  transition-colors duration-200 bg-fuchsia-700 inline-block px-3 py-1 rounded-2xl text-white;
 }
 .default {
-  @apply font-semibold tracking-wide transition-colors duration-200 inline-block hover:text-white hover:bg-fuchsia-700 px-3 py-1 rounded-2xl;
+  @apply font-semibold  transition-colors duration-200 inline-block hover:text-white hover:bg-fuchsia-700 px-3 py-1 rounded-2xl;
 }
