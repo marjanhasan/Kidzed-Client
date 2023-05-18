@@ -84,7 +84,6 @@ const Register = () => {
           className="input-field w-full "
           type="text"
           name="name"
-          id=""
           required
           placeholder="Your Name"
           onClick={(e) => setName(e.target.value)}
@@ -94,7 +93,6 @@ const Register = () => {
           className="input-field w-full"
           type="email"
           name="email"
-          id=""
           required
           placeholder="Your Email"
           onChange={handleEmail}
@@ -105,7 +103,6 @@ const Register = () => {
           className="input-field w-full"
           type="password"
           name="password"
-          id=""
           required
           placeholder="Your Password"
           onChange={handlePassword}
@@ -116,7 +113,6 @@ const Register = () => {
           className="input-field w-full"
           type="text"
           name="photos"
-          id=""
           required
           onClick={(e) => setPhoto(e.target.value)}
         />
@@ -133,7 +129,7 @@ const Register = () => {
           value="Register"
         />
       </form>
-      <Google signInWithGoogle={signInWithGoogle} />
+      <Google signInWithGoogle={signInWithGoogle} setUser={setUser} />
     </div>
   );
 };

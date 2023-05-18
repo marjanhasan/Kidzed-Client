@@ -7,14 +7,9 @@ const Login = () => {
       <h1 className="text-center text-5xl font-semibold mt-6">Login</h1>
       <form className=" max-w-sm mx-auto mt-12 ">
         <label className="input-txt">Email</label>
-        <input className="input-field w-full" type="email" name="email" id="" />
+        <input className="input-field w-full" type="email" name="email" />
         <label className="input-txt">Password</label>
-        <input
-          className="input-field w-full"
-          type="password"
-          name="password"
-          id=""
-        />
+        <input className="input-field w-full" type="password" name="password" />
         <p className="mb-4 font-medium">
           Do not have an account?{" "}
           <Link to="/register" className="text-purple-600">
