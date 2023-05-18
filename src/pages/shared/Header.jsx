@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaEllipsisV, FaPhoneSquareAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "react-tooltip/dist/react-tooltip.css";
+import { AuthContext } from "../../providers/AuthProviders";
+import { Tooltip } from "react-tooltip";
 // import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logOut, user } = useContext(AuthContext);
+  console.log(user);
   return (
     <div className="my-container">
       <div className="md:flex justify-between items-center h-fit font-semibold bg-gray-100 p-2">
@@ -74,17 +78,15 @@ const Header = () => {
           </ul>
           {/* button section  */}
 
-          {/* {user ? (
+          {user ? (
             <div className="hidden lg:flex items-center gap-4 ">
-              <Link to="/profile">
-                <img
-                  className="h-14 w-14 rounded-full"
-                  src={`${user?.photoURL}`}
-                  alt=""
-                  data-tooltip-id="my-tooltip"
-                  data-tooltip-content={user.displayName}
-                />
-              </Link>
+              <img
+                className="h-14 w-14 rounded-full"
+                src={`${user?.photoURL}`}
+                alt=""
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user.displayName}
+              />
               <Tooltip id="my-tooltip" />
               <button onClick={logOut} className="btn">
                 Logout
@@ -94,7 +96,7 @@ const Header = () => {
             <Link to="/login" className="hidden lg:flex">
               <button className="btn">Login</button>
             </Link>
-          )} */}
+          )}
         </div>
         {/* mobile navbar section  */}
         <div className="lg:hidden">
@@ -112,23 +114,21 @@ const Header = () => {
                 {/* logo & button section  */}
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    {/* {user ? (
-                        <Link to="/profile">
-                          <img
-                            className="h-14 w-14 rounded-full"
-                            src={`${user?.photoURL}`}
-                            alt=""
-                            data-tooltip-id="my-tooltip"
-                            data-tooltip-content={user.displayName}
-                          />
-                        </Link>
-                      ) : (
-                        <Link to="/" className="inline-flex items-center">
-                          <span className="ml-2 text-2xl font-bold ">
-                            only<span className="text-lime-400">Chefs</span>
-                          </span>
-                        </Link>
-                      )} */}
+                    {user ? (
+                      <img
+                        className="h-14 w-14 rounded-full"
+                        src={`${user?.photoURL}`}
+                        alt=""
+                        data-tooltip-id="my-tooltip"
+                        data-tooltip-content={user.displayName}
+                      />
+                    ) : (
+                      <Link to="/" className="inline-flex items-center">
+                        <span className="ml-2 text-2xl font-bold ">
+                          only<span className="text-lime-400">Chefs</span>
+                        </span>
+                      </Link>
+                    )}
                   </div>
                   {/* dropdown menu close button  */}
                 </div>
@@ -186,11 +186,11 @@ const Header = () => {
                       </NavLink>
                     </li>
                     <li>
-                      {/* {user ? (
-                          <span onClick={logOut}>Logout</span>
-                        ) : (
-                          <Link to="/login">Login</Link>
-                        )} */}
+                      {user ? (
+                        <span onClick={logOut}>Logout</span>
+                      ) : (
+                        <Link to="/login">Login</Link>
+                      )}
                     </li>
                   </ul>
                 </nav>
