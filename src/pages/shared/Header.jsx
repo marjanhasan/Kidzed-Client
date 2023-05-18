@@ -147,12 +147,32 @@ const Header = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="favorite-chef"
+                        to="alltoys"
                         className={({ isActive }) =>
                           isActive ? "active" : "default"
                         }
                       >
-                        Favorites
+                        All Toys
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="mytoys"
+                        className={({ isActive }) =>
+                          isActive ? "active" : "default"
+                        }
+                      >
+                        My Toys
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="addtoys"
+                        className={({ isActive }) =>
+                          isActive ? "active" : "default"
+                        }
+                      >
+                        Add Toys
                       </NavLink>
                     </li>
                     <li>
@@ -163,16 +183,6 @@ const Header = () => {
                         }
                       >
                         Blog
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="about"
-                        className={({ isActive }) =>
-                          isActive ? "active" : "default"
-                        }
-                      >
-                        About
                       </NavLink>
                     </li>
                     <li>
