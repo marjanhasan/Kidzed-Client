@@ -10,3 +10,9 @@
 .default {
   @apply font-semibold  transition-colors duration-200 inline-block hover:text-white hover:bg-fuchsia-700 px-3 py-1 rounded-2xl;
 }
+.input-txt {
+  @apply font-semibold text-lg text-gray-400;
+}
+.input-field {
+  @apply mb-3 p-2 focus:outline-none border-b-2 focus:border-purple-400 text-lg;
+}
