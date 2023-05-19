@@ -97,7 +97,12 @@ const Register = () => {
           placeholder="Your Email"
           onChange={handleEmail}
         />
-        {emailError && <span className="text-red-500">{emailError}</span>}
+        {emailError && (
+          <span className="text-red-500 py-2 text-lg font-medium">
+            {emailError}
+          </span>
+        )}
+        <br />
         <label className="input-txt">Password</label>
         <input
           className="input-field w-full"
@@ -107,7 +112,12 @@ const Register = () => {
           placeholder="Your Password"
           onChange={handlePassword}
         />
-        {passwordError && <span className="text-red-500">{passwordError}</span>}
+        {passwordError && (
+          <span className="text-red-500 py-2 text-lg font-medium">
+            {passwordError}
+          </span>
+        )}
+        <br />
         <label className="input-txt">Photo URL</label>
         <input
           className="input-field w-full"
@@ -116,7 +126,11 @@ const Register = () => {
           required
           onClick={(e) => setPhoto(e.target.value)}
         />
-        {errorMessage && <span className="text-red-500">{errorMessage}</span>}
+        {errorMessage && (
+          <span className="text-red-500 py-2 text-lg font-medium">
+            {errorMessage}
+          </span>
+        )}
         <p className="mb-4 font-medium">
           Already have an account?{" "}
           <Link to="/login" className="text-purple-600">

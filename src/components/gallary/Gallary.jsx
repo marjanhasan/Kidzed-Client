@@ -44,17 +44,20 @@ const Gallary = () => {
     },
   ];
   return (
-    <div className="my-container">
-      <div className="title-body">
-        <h1 className="title">Popular Toys</h1>
-        <p className="para">
-          We strive to have a positive impact on our customers and our community
-        </p>
-      </div>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {chefs.map((chef) => (
-          <GallaryCards key={chef.id} photo={chef.photo} />
-        ))}
+    <div className="bg-purple-200">
+      <div className="my-container py-12 ">
+        <div className="title-body">
+          <h1 className="title">Popular Toys</h1>
+          <p className="para">
+            We strive to have a positive impact on our customers and our
+            community
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {chefs.map((chef) => (
+            <GallaryCards key={chef.id} photo={chef.photo} />
+          ))}
+        </div>
       </div>
     </div>
   );

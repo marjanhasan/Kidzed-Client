@@ -20,10 +20,13 @@ const Google = ({ signInWithGoogle, setUser }) => {
   };
   return (
     <div className="max-w-sm mx-auto py-6">
-      {errorMessage && <span className="text-red-500">{errorMessage}</span>}
+      {errorMessage && (
+        <span className="text-red-500 text-lg font-medium">{errorMessage}</span>
+      )}{" "}
+      <br />
       <button
         onClick={handleGoogleSignIn}
-        className="flex items-center justify-center w-full p-2 bg-purple-500 gap-2 rounded-md text-white font-semibold"
+        className="flex items-center justify-center w-full p-2 bg-purple-500 gap-2 rounded-md text-white font-semibold mt-3"
       >
         <FaGoogle />
         Google Sign In

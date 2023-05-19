@@ -60,7 +60,11 @@ const Login = () => {
           placeholder="Your Password"
           onChange={handlePassword}
         />
-        {errorMessage && <span className="text-red-500">{errorMessage}</span>}
+        {errorMessage && (
+          <span className="text-red-500 py-2 text-lg font-medium">
+            {errorMessage}
+          </span>
+        )}
         <p className="mb-4 font-medium">
           Do not have an account?{" "}
           <Link to="/register" className="text-purple-600">

@@ -8,7 +8,7 @@ import {
 import { Link } from "react-router-dom";
 const Collection = () => {
   return (
-    <div className="bg-blue-500 my-12">
+    <div className="bg-indigo-500 py-12">
       <div className="my-container py-12 ">
         <div className="title-body">
           <h1 className="title text-white">What We Have</h1>
@@ -19,7 +19,7 @@ const Collection = () => {
             for your child (or you).
           </p>
         </div>
-        <div className="flex justify-around">
+        <div className="flex justify-around flex-wrap">
           <div>
             <div className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center">
               <FaDraftingCompass className="text-amber-500 text-6xl" />
