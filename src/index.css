@@ -26,5 +26,5 @@
   @apply text-3xl md:text-5xl font-semibold mb-3;
 }
 .title-body {
-  @apply text-center mb-6;
+  @apply text-center my-12;
 }
