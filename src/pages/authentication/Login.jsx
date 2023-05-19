@@ -2,8 +2,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Google from "./Google";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
+  useTitle("Login");
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [password, setPassword] = useState("");

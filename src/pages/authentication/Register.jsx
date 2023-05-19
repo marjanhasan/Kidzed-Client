@@ -2,8 +2,10 @@ import { Link, useNavigate } from "react-router-dom";
 import Google from "./Google";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import useTitle from "../../hooks/useTitle";
 
 const Register = () => {
+  useTitle("Register");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
