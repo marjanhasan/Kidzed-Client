@@ -2,11 +2,14 @@ import {
   FaBookReader,
   FaBusinessTime,
   FaClock,
+  FaFacebookF,
+  FaInstagram,
   FaMapMarkedAlt,
   FaPhoneAlt,
   FaPizzaSlice,
   FaRegClock,
   FaRegCopyright,
+  FaTwitter,
   FaWarehouse,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -34,6 +37,17 @@ const Footer = () => {
               <div className="flex gap-1 items-center">
                 <FaPhoneAlt className="text-purple-800" />
                 <span className="text-lg font-medium">719.578.5549</span>
+              </div>
+              <div className="flex gap-4 mt-4">
+                <div className="flex justify-center items-center p-4 bg-purple-600 rounded-full cursor-pointer hover:bg-fuchsia-800">
+                  <FaFacebookF className="text-white" />
+                </div>
+                <div className="flex justify-center items-center p-4 bg-purple-600 rounded-full cursor-pointer hover:bg-fuchsia-800">
+                  <FaInstagram className="text-white" />
+                </div>
+                <div className="flex justify-center items-center p-4 bg-purple-600 rounded-full cursor-pointer hover:bg-fuchsia-800">
+                  <FaTwitter className="text-white" />
+                </div>
               </div>
             </div>
             <div className=" md:w-1/3">

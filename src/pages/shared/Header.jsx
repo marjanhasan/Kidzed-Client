@@ -50,22 +50,30 @@ const Header = () => {
                 All Toys
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="mytoys"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                My Toys
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="addtoys"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                Add Toys
-              </NavLink>
-            </li>
+            {user && (
+              <li>
+                <NavLink
+                  to="mytoys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  My Toys
+                </NavLink>
+              </li>
+            )}
+            {user && (
+              <li>
+                <NavLink
+                  to="addtoys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Add Toys
+                </NavLink>
+              </li>
+            )}
             <li>
               <NavLink
                 to="blog"
