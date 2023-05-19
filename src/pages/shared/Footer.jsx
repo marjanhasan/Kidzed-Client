@@ -16,7 +16,7 @@ const Footer = () => {
     <div>
       <div className="bg-purple-100 py-24">
         <div className="my-container ">
-          <div className=" md:flex">
+          <div className=" md:flex md:gap-x-6">
             <div className=" md:w-1/3">
               <div className="py-4">
                 <Link to="/">

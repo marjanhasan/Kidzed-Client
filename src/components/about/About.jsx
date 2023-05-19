@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <div>
@@ -15,9 +17,11 @@ const About = () => {
             We strive to have a positive impact on our customers and our
             community
           </p>
-          <button className="text-base md:text-lg font-semibold px-6 md:px-10 py-2 md:py-4 rounded-xl border-2 md:border-4">
-            More About Us
-          </button>
+          <Link to="/blog">
+            <button className="text-base md:text-lg font-semibold px-6 md:px-10 py-2 md:py-4 rounded-xl border-2 md:border-4">
+              More About Us
+            </button>
+          </Link>
         </div>
       </div>
     </div>
