@@ -6,6 +6,9 @@ import {
   FaPuzzlePiece,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const Collection = () => {
   return (
     <div className="bg-indigo-500 py-12">
@@ -21,7 +24,10 @@ const Collection = () => {
         </div>
         <div className="flex justify-around flex-wrap">
           <div>
-            <div className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center">
+            <div
+              data-aos="flip-left"
+              className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
+            >
               <FaDraftingCompass className="text-amber-500 text-6xl" />
             </div>
             <p className="text-center text-2xl font-bold py-6 text-white">
@@ -29,7 +35,10 @@ const Collection = () => {
             </p>
           </div>
           <div>
-            <div className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center">
+            <div
+              data-aos="flip-left"
+              className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
+            >
               <FaPuzzlePiece className="text-amber-500 text-6xl" />
             </div>
             <p className="text-center text-2xl font-bold py-6 text-white">
@@ -37,7 +46,10 @@ const Collection = () => {
             </p>
           </div>
           <div>
-            <div className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center">
+            <div
+              data-aos="flip-left"
+              className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
+            >
               <FaMicroscope className="text-amber-500 text-6xl" />
             </div>
             <p className="text-center text-2xl font-bold py-6 text-white">
@@ -45,7 +57,10 @@ const Collection = () => {
             </p>
           </div>
           <div>
-            <div className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center">
+            <div
+              data-aos="flip-left"
+              className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
+            >
               <FaLightbulb className="text-amber-500 text-6xl" />
             </div>
             <p className="text-center text-2xl font-bold py-6 text-white">
@@ -53,7 +68,10 @@ const Collection = () => {
             </p>
           </div>
           <div>
-            <div className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center">
+            <div
+              data-aos="flip-left"
+              className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
+            >
               <FaChessRook className="text-amber-500 text-6xl" />
             </div>
             <p className="text-center text-2xl font-bold py-6 text-white">
