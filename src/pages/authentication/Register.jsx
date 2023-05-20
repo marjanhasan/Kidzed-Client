@@ -36,6 +36,7 @@ const Register = () => {
         form.reset();
         userProfile(name, photo)
           .then(() => {
+            console.log(name, photo);
             setErrorMessage("");
           })
           .catch((error) => {
@@ -88,7 +89,7 @@ const Register = () => {
           name="name"
           required
           placeholder="Your Name"
-          onClick={(e) => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
         />
         <label className="input-txt">Email</label>
         <input
@@ -126,7 +127,7 @@ const Register = () => {
           type="text"
           name="photos"
           required
-          onClick={(e) => setPhoto(e.target.value)}
+          onChange={(e) => setPhoto(e.target.value)}
         />
         {errorMessage && (
           <span className="text-red-500 py-2 text-lg font-medium">

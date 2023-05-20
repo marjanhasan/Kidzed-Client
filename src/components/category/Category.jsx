@@ -13,7 +13,6 @@ const Category = () => {
       .then((res) => res.json())
       .then((result) => {
         setData(result);
-        console.log(result);
       });
   }, [selectedTab]);
   useEffect(() => {
