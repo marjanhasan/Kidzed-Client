@@ -13,7 +13,11 @@ const Collection = () => {
   return (
     <div className="bg-indigo-500 py-12">
       <div className="my-container py-12 ">
-        <div className="title-body">
+        <div
+          className="title-body"
+          data-aos="fade-right"
+          data-aos-duration="600"
+        >
           <h1 className="title text-white">What We Have</h1>
           <p className="text-base font-medium lg:mx-12 text-white">
             Whether you’re looking for a game or puzzle, a lovable stuffed
@@ -26,6 +30,7 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
+              data-aos-duration="600"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaDraftingCompass className="text-amber-500 text-6xl" />
@@ -37,6 +42,7 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
+              data-aos-duration="600"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaPuzzlePiece className="text-amber-500 text-6xl" />
@@ -48,6 +54,7 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
+              data-aos-duration="600"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaMicroscope className="text-amber-500 text-6xl" />
@@ -59,6 +66,7 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
+              data-aos-duration="600"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaLightbulb className="text-amber-500 text-6xl" />
@@ -70,6 +78,7 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
+              data-aos-duration="600"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaChessRook className="text-amber-500 text-6xl" />
