@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import CategoryCards from "./CategoryCards";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 // const math = 1;
@@ -10,11 +9,6 @@ const Category = () => {
   const [data, setData] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [selectedTab, setSelectedTab] = useState("math");
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-    AOS.refreshHard();
-  }, []);
   useEffect(() => {
     fetch(
       `https://toy-marketplace-server-brown-omega.vercel.app/alltoys/${selectedTab}`

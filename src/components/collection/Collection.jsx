@@ -6,15 +6,8 @@ import {
   FaPuzzlePiece,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 const Collection = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-    AOS.refreshHard();
-  }, []);
   return (
     <div className="bg-indigo-500 py-12 overflow-hidden">
       <div className="my-container py-12 ">
