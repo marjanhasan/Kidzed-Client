@@ -17,6 +17,7 @@ const Collection = () => {
           className="title-body"
           data-aos="fade-right"
           data-aos-duration="600"
+          data-aos-offset="1000"
         >
           <h1 className="title text-white">What We Have</h1>
           <p className="text-base font-medium lg:mx-12 text-white">
@@ -30,7 +31,8 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
-              data-aos-duration="600"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaDraftingCompass className="text-amber-500 text-6xl" />
@@ -42,7 +44,8 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
-              data-aos-duration="600"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaPuzzlePiece className="text-amber-500 text-6xl" />
@@ -54,7 +57,8 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
-              data-aos-duration="600"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaMicroscope className="text-amber-500 text-6xl" />
@@ -66,7 +70,8 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
-              data-aos-duration="600"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaLightbulb className="text-amber-500 text-6xl" />
@@ -78,7 +83,8 @@ const Collection = () => {
           <div>
             <div
               data-aos="flip-left"
-              data-aos-duration="600"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaChessRook className="text-amber-500 text-6xl" />
