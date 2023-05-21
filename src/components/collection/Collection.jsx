@@ -17,7 +17,7 @@ const Collection = () => {
           className="title-body"
           data-aos="fade-right"
           data-aos-duration="600"
-          data-aos-offset="1000"
+          data-aos-offset="300"
         >
           <h1 className="title text-white">What We Have</h1>
           <p className="text-base font-medium lg:mx-12 text-white">
