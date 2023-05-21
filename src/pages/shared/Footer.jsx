@@ -23,9 +23,14 @@ const Footer = () => {
             <div className=" md:w-1/3">
               <div className="py-4">
                 <Link to="/">
-                  <span className="text-2xl font-bold text-fuchsia-700 underline decoration-wavy">
-                    Kidzed
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <img src="kidzed.png" className="h-10 w-10" alt="" />
+                    </div>
+                    <div className="text-2xl font-bold text-fuchsia-700 underline decoration-wavy">
+                      Kidzed
+                    </div>
+                  </div>
                 </Link>
               </div>
               <div className="flex gap-1 items-center">

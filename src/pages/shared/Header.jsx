@@ -8,7 +8,7 @@ import { Tooltip } from "react-tooltip";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { logOut, user } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   return (
     <div className="my-container">
       <div className="md:flex justify-between items-center h-fit font-semibold bg-gray-100 p-2">
@@ -25,11 +25,14 @@ const Header = () => {
       <div className="flex items-center justify-between relative px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         {/* logo section  */}
         <Link to="/" className="">
-          <span className="ml-2 text-2xl font-bold ">
-            <span className="text-fuchsia-700 underline decoration-wavy">
+          <div className="ml-2 text-2xl font-bold flex items-center gap-2">
+            <div>
+              <img src="kidzed.png" className="h-10 w-10" alt="" />
+            </div>{" "}
+            <div className="text-fuchsia-700 underline decoration-wavy ">
               Kidzed
-            </span>
-          </span>
+            </div>
+          </div>
         </Link>
         <div className="flex">
           {/* nav section  */}

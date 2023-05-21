@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import useTitle from "../../hooks/useTitle";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const AddToys = () => {
   useTitle("Add Toys");
+  const { user } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -49,7 +52,7 @@ const AddToys = () => {
         )}
         <input
           className="border-2 w-full m-2 border-gray-600 focus:outline-purple-600 p-2 rounded"
-          defaultValue="Seller Name"
+          defaultValue={user.displayName}
           {...register("sellerName", { required: true })}
         />
         {errors.sellerName && (
@@ -59,7 +62,7 @@ const AddToys = () => {
         )}
         <input
           className="border-2 w-full m-2 border-gray-600 focus:outline-purple-600 p-2 rounded"
-          defaultValue="Seller email"
+          defaultValue={user.email}
           {...register("email", { required: true })}
         />
         {errors.email && (
