@@ -6,8 +6,10 @@ import {
   FaPuzzlePiece,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AOS from "aos";
 import "aos/dist/aos.css";
 const Collection = () => {
+  AOS.init();
   return (
     <div className="bg-indigo-500 py-12 overflow-hidden">
       <div className="my-container py-12 ">
