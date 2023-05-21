@@ -32,7 +32,7 @@ const Collection = () => {
             <div
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
+              data-aos-duration="700"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaDraftingCompass className="text-amber-500 text-6xl" />
@@ -45,7 +45,7 @@ const Collection = () => {
             <div
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
+              data-aos-duration="700"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaPuzzlePiece className="text-amber-500 text-6xl" />
@@ -58,7 +58,7 @@ const Collection = () => {
             <div
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
+              data-aos-duration="700"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaMicroscope className="text-amber-500 text-6xl" />
@@ -71,7 +71,7 @@ const Collection = () => {
             <div
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
+              data-aos-duration="700"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaLightbulb className="text-amber-500 text-6xl" />
@@ -84,7 +84,7 @@ const Collection = () => {
             <div
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
+              data-aos-duration="700"
               className="bg-purple-900 rounded-full w-32 h-32 flex items-center justify-center"
             >
               <FaChessRook className="text-amber-500 text-6xl" />
@@ -97,8 +97,7 @@ const Collection = () => {
         <div
           className="flex justify-center"
           data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-offset="1000"
+          data-aos-duration="700"
         >
           <Link to="alltoys">
             <button className="bg-purple-600 hover:bg-purple-700 px-10 py-4 rounded-xl text-white font-medium text-lg">
