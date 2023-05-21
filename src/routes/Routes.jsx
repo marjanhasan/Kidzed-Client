@@ -10,6 +10,7 @@ import Register from "../pages/authentication/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../components/ErrorPage";
 import SingleToys from "../pages/singleToys/SingleToys";
+import LoadingSpinner from "../components/LoadingSpinner";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
           fetch(
             `https://toy-marketplace-server-brown-omega.vercel.app/singleToys/${params.id}`
           ),
+      },
+      {
+        path: "loader",
+        element: <LoadingSpinner />,
       },
     ],
   },

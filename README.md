@@ -2,7 +2,7 @@
 
 ## WELCOME TO Kidzed TOY STORE.
 
-You will find the best classic, whimsical and educational toys for kids of all ages at kidzed Toy Store using MERN stack and Tailwind CSS, Firebase technology.
+You will find the best classic, whimsical and educational toys for kids of all ages at kidzed Toy Store using MERN stack, Tailwind CSS & Firebase technology.
 
 ## Live Link
 
