@@ -27,7 +27,7 @@ const Header = () => {
         <Link to="/" className="">
           <div className="ml-2 text-2xl font-bold flex items-center gap-2">
             <div>
-              <img src="kidzed.png" className="h-10 w-10" alt="" />
+              <img src="/kidzed.png" className="h-10 w-10" alt="" />
             </div>{" "}
             <div className="text-fuchsia-700 underline decoration-wavy ">
               Kidzed

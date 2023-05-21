@@ -9,6 +9,7 @@ import Login from "../pages/authentication/Login";
 import Register from "../pages/authentication/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../components/ErrorPage";
+import SingleToys from "../pages/singleToys/SingleToys";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +51,16 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+      {
+        path: "alltoys/:id",
+        element: (
+          <PrivateRoutes>
+            <SingleToys />
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/singleToys/${params.id}`),
       },
     ],
   },

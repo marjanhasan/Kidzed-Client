@@ -25,7 +25,7 @@ const Footer = () => {
                 <Link to="/">
                   <div className="flex items-center gap-2">
                     <div>
-                      <img src="kidzed.png" className="h-10 w-10" alt="" />
+                      <img src="/kidzed.png" className="h-10 w-10" alt="" />
                     </div>
                     <div className="text-2xl font-bold text-fuchsia-700 underline decoration-wavy">
                       Kidzed

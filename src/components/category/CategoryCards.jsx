@@ -1,5 +1,22 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 const CategoryCards = ({ data }) => {
-  const { photo, toyName, price, ratings } = data;
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+  const { _id, photo, toyName, price, ratings } = data;
+  const handleDetails = () => {
+    if (!user) {
+      Swal.fire({
+        title: "Not Login!",
+        text: "Redirecting to the Login Page",
+        icon: "info",
+        confirmButtonText: "Ok",
+      });
+    }
+    navigate(`/alltoys/${_id}`);
+  };
   return (
     <div className="bg-purple-50 border-2 border-purple-600 rounded-md  flex flex-col justify-center overflow-hidden my-6">
       <div className="max-h-64  w-full bg-purple-100 flex items-center justify-center rounded-md">
@@ -17,8 +34,8 @@ const CategoryCards = ({ data }) => {
         </div>
 
         <button
+          onClick={handleDetails}
           className="mt-3 px-8 py-3 bg-purple-600 hover:bg-fuchsia-600 rounded-md text-white font-medium"
-          //   onClick={() => navigate(`services/${singleInfo.id}`)}
         >
           View Details
         </button>

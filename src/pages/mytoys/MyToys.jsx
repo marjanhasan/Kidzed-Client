@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   useTitle("My Toys");
@@ -51,15 +52,52 @@ const MyToys = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
         setControl(!control);
+        if (result.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Toys Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Done",
+          });
+        }
       });
     // After performing the update, close the modal
     handleModalClose();
   };
+
+  const handleDelete = (_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/deleteToys/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            setControl(!control);
+            if (result.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your Toy has been deleted.",
+                icon: "success",
+                confirmButtonText: "Done",
+              });
+            }
+          });
+      }
+    });
+  };
   return (
     <div className="container mx-auto p-4 ">
-      <h1 className="text-2xl font-bold mb-4">My Toys</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">My Toys</h1>
       <table className="w-full border">
         <thead>
           <tr>
@@ -96,11 +134,14 @@ const MyToys = () => {
               <td className="border px-4 py-2">
                 <button
                   onClick={() => handleUpdateClick(toy)}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full my-1"
                 >
                   Update
                 </button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                <button
+                  onClick={() => handleDelete(toy._id)}
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full my-1"
+                >
                   Delete
                 </button>
               </td>

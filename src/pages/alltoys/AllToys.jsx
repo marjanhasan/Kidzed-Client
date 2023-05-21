@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useTitle from "../../hooks/useTitle";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const AllToys = () => {
   useTitle("All Toys");
   const [toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
   useEffect(() => {
     fetch("http://localhost:5000/allToys/all")
       .then((res) => res.json())
@@ -15,9 +20,20 @@ const AllToys = () => {
       .then((res) => res.json())
       .then((result) => setToys(result));
   };
+  const handleDetails = (_id) => {
+    if (!user) {
+      Swal.fire({
+        title: "Not Login!",
+        text: "Redirecting to the Login Page",
+        icon: "info",
+        confirmButtonText: "Ok",
+      });
+    }
+    navigate(`/alltoys/${_id}`);
+  };
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">All Toys</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">All Toys</h1>
       <div className="flex justify-center my-5">
         <input
           onChange={(e) => setSearchText(e.target.value)}
@@ -53,7 +69,10 @@ const AllToys = () => {
               <td className="border px-4 py-2">${toy.price}</td>
               <td className="border px-4 py-2">{toy.quantity}</td>
               <td className="border px-4 py-2">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button
+                  onClick={() => handleDetails(toy._id)}
+                  className="bg-purple-500 hover:bg-fuchsia-700 text-white font-bold py-2 px-4 rounded w-full"
+                >
                   View Details
                 </button>
               </td>

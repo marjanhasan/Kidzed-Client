@@ -2,6 +2,7 @@ import { useContext } from "react";
 import useTitle from "../../hooks/useTitle";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
   useTitle("Add Toys");
@@ -12,7 +13,6 @@ const AddToys = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     fetch("http://localhost:5000/addToys", {
       method: "POST",
       headers: {
@@ -22,11 +22,18 @@ const AddToys = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        if (result.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Toy Added Successfully",
+            icon: "success",
+            confirmButtonText: "Done",
+          });
+        }
       });
   };
   return (
-    <div className="my-container">
+    <div className="my-container py-12">
       <div className="title-body">
         <h1 className="title">Add Toys</h1>
       </div>
