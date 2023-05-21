@@ -94,7 +94,12 @@ const Collection = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div
+          className="flex justify-center"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-offset="1000"
+        >
           <Link to="alltoys">
             <button className="bg-purple-600 hover:bg-purple-700 px-10 py-4 rounded-xl text-white font-medium text-lg">
               Shop Now
