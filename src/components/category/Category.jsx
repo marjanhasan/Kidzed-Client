@@ -28,7 +28,12 @@ const Category = () => {
   }, [tabIndex]);
   return (
     <div className="my-container my-6">
-      <div className="title-body">
+      <div
+        className="title-body"
+        data-aos="fade-left"
+        data-aos-duration="600"
+        data-aos-offset="1000"
+      >
         <h1 className="title"> Welcome to unlimited Categorys</h1>
         <p className="para">
           We strive to have a positive impact on our customers and our community
