@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import CategoryCards from "./CategoryCards";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 // const math = 1;
 const Category = () => {
   const [data, setData] = useState([]);
@@ -27,7 +30,7 @@ const Category = () => {
     }
   }, [tabIndex]);
   return (
-    <div className="my-container my-6">
+    <div className="my-container my-6 overflow-hidden">
       <div
         className="title-body"
         data-aos="fade-left"

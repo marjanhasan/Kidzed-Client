@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 AOS.init();
 const Collection = () => {
   return (
-    <div className="bg-indigo-500 py-12">
+    <div className="bg-indigo-500 py-12 overflow-hidden">
       <div className="my-container py-12 ">
         <div
           className="title-body"
