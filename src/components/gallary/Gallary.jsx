@@ -3,7 +3,7 @@ import GallaryCards from "./GallaryCards";
 const Gallary = () => {
   const [toys, setToys] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/alltoys")
+    fetch("https://toy-marketplace-server-brown-omega.vercel.app/alltoys")
       .then((res) => res.json())
       .then((result) => setToys(result));
   }, []);

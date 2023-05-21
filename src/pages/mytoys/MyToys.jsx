@@ -15,7 +15,9 @@ const MyToys = () => {
   const [control, setControl] = useState(false);
   const updateToys = {};
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys/${user.displayName}`)
+    fetch(
+      `https://toy-marketplace-server-brown-omega.vercel.app/myToys/${user.displayName}`
+    )
       .then((res) => res.json())
       .then((result) => setToys(result));
   }, [user.displayName, control]);
@@ -43,13 +45,16 @@ const MyToys = () => {
     updateToys.quantity = updatedQuantity;
     updateToys.description = updatedDescription;
     // console.log(updateToys);
-    fetch(`http://localhost:5000/updateToys/${updateToys._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateToys),
-    })
+    fetch(
+      `https://toy-marketplace-server-brown-omega.vercel.app/updateToys/${updateToys._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateToys),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         setControl(!control);
@@ -77,9 +82,12 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/deleteToys/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://toy-marketplace-server-brown-omega.vercel.app/deletetoys/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((result) => {
             setControl(!control);

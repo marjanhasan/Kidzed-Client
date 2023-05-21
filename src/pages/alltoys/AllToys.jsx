@@ -11,12 +11,14 @@ const AllToys = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   useEffect(() => {
-    fetch("http://localhost:5000/allToys/all")
+    fetch("https://toy-marketplace-server-brown-omega.vercel.app/alltoys/all")
       .then((res) => res.json())
       .then((result) => setToys(result));
   }, []);
   const handleSearch = () => {
-    fetch(`http://localhost:5000/toySearch/${searchText}`)
+    fetch(
+      `https://toy-marketplace-server-brown-omega.vercel.app/toysearch/${searchText}`
+    )
       .then((res) => res.json())
       .then((result) => setToys(result));
   };

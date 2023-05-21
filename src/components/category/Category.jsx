@@ -9,7 +9,9 @@ const Category = () => {
   const [selectedTab, setSelectedTab] = useState("math");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allToys/${selectedTab}`)
+    fetch(
+      `https://toy-marketplace-server-brown-omega.vercel.app/alltoys/${selectedTab}`
+    )
       .then((res) => res.json())
       .then((result) => {
         setData(result);

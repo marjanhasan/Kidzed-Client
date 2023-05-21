@@ -60,7 +60,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/singleToys/${params.id}`),
+          fetch(
+            `https://toy-marketplace-server-brown-omega.vercel.app/singleToys/${params.id}`
+          ),
       },
     ],
   },
